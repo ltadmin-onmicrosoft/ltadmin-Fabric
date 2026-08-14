@@ -1,0 +1,109 @@
+{
+  "schema_version": 77,
+  "flavor": "RTDashboard_Regular",
+  "changeDetection": {
+    "kind": "liveUpdates",
+    "fallbackRefreshRate": "5m",
+    "minRefreshRate": "30s"
+  },
+  "tiles": [
+    {
+      "id": "3ccd1d39-31c3-4bb0-914d-1a3d727db139",
+      "title": "Average Prices",
+      "visualType": "column",
+      "pageId": "67d72023-786c-4bd9-9107-d5b5dbba487d",
+      "layout": {
+        "x": 0,
+        "y": 0,
+        "width": 9,
+        "height": 7
+      },
+      "queryRef": {
+        "kind": "query",
+        "queryId": "d5e18356-f828-4b3a-a220-242655d82bc6"
+      },
+      "description": "Average Price for each stock symbol in the last 5 minutes",
+      "visualOptions": {
+        "multipleYAxes": {
+          "base": {
+            "id": "-1",
+            "label": "",
+            "columns": [],
+            "yAxisMaximumValue": null,
+            "yAxisMinimumValue": null,
+            "yAxisScale": "linear",
+            "horizontalLines": []
+          },
+          "additional": [],
+          "showMultiplePanels": false
+        },
+        "seriesColors": {},
+        "hideLegend": false,
+        "legendLocation": "bottom",
+        "xColumnTitle": "",
+        "xColumn": null,
+        "yColumns": null,
+        "seriesColumns": null,
+        "xAxisScale": "linear",
+        "verticalLine": "",
+        "crossFilter": [],
+        "crossFilterDisabled": false,
+        "drillthroughDisabled": false,
+        "forceAxisTicks": false,
+        "drillthrough": [],
+        "selectedDataOnLoad": {
+          "all": true,
+          "limit": 10
+        }
+      }
+    }
+  ],
+  "baseQueries": [],
+  "parameters": [
+    {
+      "kind": "duration",
+      "id": "8d4a70f1-33c5-4409-8557-f3f509661231",
+      "displayName": "Time range",
+      "description": "",
+      "beginVariableName": "_startTime",
+      "endVariableName": "_endTime",
+      "defaultValue": {
+        "kind": "dynamic",
+        "count": 1,
+        "unit": "hours"
+      },
+      "showOnPages": {
+        "kind": "all"
+      }
+    }
+  ],
+  "dataSources": [
+    {
+      "id": "3db858cb-51b1-4fd8-aee9-b46b4b140bd6",
+      "kind": "kusto-trident",
+      "name": "Stock_Eventhouse",
+      "clusterUri": "",
+      "databaseArtifactId": "41d14c7a-96ad-431b-a8c8-807e76b08a4b",
+      "database": "76b08a4b-807e-a8c8-431b-96ad41d14c7a",
+      "workspace": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Stock Price Change",
+      "id": "67d72023-786c-4bd9-9107-d5b5dbba487d"
+    }
+  ],
+  "queries": [
+    {
+      "dataSource": {
+        "kind": "inline",
+        "dataSourceId": "3db858cb-51b1-4fd8-aee9-b46b4b140bd6"
+      },
+      "text": "// LT: Retrieve average price for each stock symbol in the last 5 minutes\r\nStok\r\n| where [\"time\"] > ago(5m)\r\n| summarize avgPrice = avg(todecimal(bidPrice)) by symbol\r\n| project symbol, avgPrice",
+      "id": "d5e18356-f828-4b3a-a220-242655d82bc6",
+      "usedVariables": []
+    }
+  ],
+  "embeddedApps": []
+}

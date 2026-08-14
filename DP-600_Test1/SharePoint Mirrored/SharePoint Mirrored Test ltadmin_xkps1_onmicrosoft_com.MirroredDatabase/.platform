@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "MirroredDatabase",
+    "displayName": "SharePoint Mirrored Test ltadmin_xkps1_onmicrosoft_com"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "41a3aaca-0e7f-b883-426c-79ccd4d35209"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventstream",
+    "displayName": "Brighton-Weather"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f527912b-6e8d-9908-4ed8-fe979408211c"
+  }
+}

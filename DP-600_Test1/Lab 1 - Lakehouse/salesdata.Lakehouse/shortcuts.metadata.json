@@ -1,0 +1,14 @@
+[
+  {
+    "name": "diabetes_test",
+    "path": "/Tables/dbo",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/ML_Test_Data_Schema/diabetes_test",
+        "itemId": "cde45533-5175-415c-965d-efb25b61c8ca",
+        "workspaceId": "f1d72160-b566-4d74-92c0-2ee86e877e28"
+      }
+    }
+  }
+]

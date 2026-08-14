@@ -1,0 +1,25 @@
+{
+  "sources": [
+    {
+      "id": "99cbd002-579e-4988-9b20-3fb0bc7a2280",
+      "name": "real-time-weather",
+      "type": "RealTimeWeather",
+      "properties": {
+        "latitude": 50.866695,
+        "longitude": -0.135337
+      }
+    }
+  ],
+  "destinations": [],
+  "streams": [
+    {
+      "id": "96010d34-c36f-46cd-b94b-3248829dc267",
+      "name": "Brighton-Weather-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": []
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.1"
+}

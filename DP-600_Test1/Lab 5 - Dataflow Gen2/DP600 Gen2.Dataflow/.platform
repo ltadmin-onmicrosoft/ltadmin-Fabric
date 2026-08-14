@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "DP600 Gen2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "40ddc4db-d6cc-813d-4cf1-eb6691441b8c"
+  }
+}
