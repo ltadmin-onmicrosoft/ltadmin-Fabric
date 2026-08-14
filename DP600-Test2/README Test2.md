@@ -1,2 +1,0 @@
-# ltadmin-Fabric
-Fabric test
