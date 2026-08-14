@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "source": {
+      "type": "SharePointList",
+      "typeProperties": {
+        "connection": "2edb9730-b159-40e7-800a-d9a23e7cbc82",
+        "filterRules": [
+          {
+            "target": "objectType",
+            "action": "allow",
+            "values": [
+              "Table",
+              "DocumentLibrary"
+            ]
+          }
+        ]
+      }
+    },
+    "target": {
+      "type": "MountedRelationalDatabase",
+      "typeProperties": {
+        "defaultSchema": "dbo",
+        "format": "Delta",
+        "retentionInDays": 1,
+        "enableDeltaChangeDataFeed": false
+      }
+    }
+  }
+}

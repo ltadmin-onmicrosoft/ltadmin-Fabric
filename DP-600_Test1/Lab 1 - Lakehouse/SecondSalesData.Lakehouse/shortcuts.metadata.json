@@ -1,0 +1,15 @@
+[
+  {
+    "name": "sales",
+    "path": "/Tables/dbo",
+    "target": {
+      "type": "OneLake",
+      "oneLake": {
+        "path": "Tables/dbo/sales",
+        "itemId": "4dc735b5-3efa-9ae4-4071-e8466719afb2",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Lakehouse"
+      }
+    }
+  }
+]

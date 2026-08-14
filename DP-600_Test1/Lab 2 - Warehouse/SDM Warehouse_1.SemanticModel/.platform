@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "SDM Warehouse_1"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "067feed2-9f80-8b49-4137-89a768c6bc24"
+  }
+}
